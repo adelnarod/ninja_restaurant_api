@@ -1,5 +1,5 @@
 from ninja import Schema, ModelSchema
-from .models import Restaurant
+
 
 class RestaurantIn(Schema):
     name: str
@@ -7,6 +7,7 @@ class RestaurantIn(Schema):
     rating: int = None
 
 class RestaurantOut(Schema):
+    id: int
     name: str
     restaurant_type: str
     rating: int

@@ -20,10 +20,12 @@ from ninja import NinjaAPI,  Schema
 from restaurant.models import Restaurant
 from restaurant.serializers import RestaurantIn
 from restaurant.api import router as restaurants_router
+from menu.api import router as menus_router
 
 api = NinjaAPI()
 
 api.add_router("/restaurants/", restaurants_router)
+api.add_router("/menus/", menus_router)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
